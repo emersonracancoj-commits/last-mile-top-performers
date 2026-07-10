@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "src_frontend_src_app_app_app",
+      "label": "App",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/app.ts",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_auth_auth_service_authservice",
+      "label": "AuthService",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/auth/auth.service.ts",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_components_incidencia_modal_incidencia_modal_incidenciamodal",
+      "label": "IncidenciaModal",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/components/incidencia-modal/incidencia-modal.ts",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_components_login_page_login_page_loginpage",
+      "label": "LoginPage",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/components/login-page/login-page.ts",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard_rankingdashboard",
+      "label": "RankingDashboard",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_services_notification_service_websocketevent",
+      "label": "WebSocketEvent",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/services/notification.service.ts",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_services_notification_service_notificationservice",
+      "label": "NotificationService",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/services/notification.service.ts",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_services_repartidores_service_repartidorrendimientodto",
+      "label": "RepartidorRendimientoDto",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/services/repartidores.service.ts",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "src_frontend_src_app_services_repartidores_service_repartidoresservice",
+      "label": "RepartidoresService",
+      "file_type": "code",
+      "source_file": "src/frontend/src/app/services/repartidores.service.ts",
+      "source_location": "L19",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_frontend_src_app_app_config",
+      "target": "src_frontend_src_app_auth_auth_service_authservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/app.config.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_app_config",
+      "target": "src_frontend_src_app_services_notification_service_notificationservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/app.config.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_app_routes",
+      "target": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard_rankingdashboard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/app.routes.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_app_routes",
+      "target": "src_frontend_src_app_components_login_page_login_page_loginpage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/app.routes.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_app_spec",
+      "target": "src_frontend_src_app_app_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/app.spec.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_auth_auth_guard",
+      "target": "src_frontend_src_app_auth_auth_service_authservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/auth/auth.guard.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_incidencia_modal_incidencia_modal",
+      "target": "src_frontend_src_app_services_repartidores_service_repartidoresservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/incidencia-modal/incidencia-modal.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_login_page_login_page",
+      "target": "src_frontend_src_app_auth_auth_service_authservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/login-page/login-page.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard_spec",
+      "target": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard_rankingdashboard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard",
+      "target": "src_frontend_src_app_services_repartidores_service_repartidorrendimientodto",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard",
+      "target": "src_frontend_src_app_services_repartidores_service_repartidoresservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard",
+      "target": "src_frontend_src_app_services_notification_service_notificationservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard",
+      "target": "src_frontend_src_app_components_incidencia_modal_incidencia_modal_incidenciamodal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_components_ranking_dashboard_ranking_dashboard",
+      "target": "src_frontend_src_app_auth_auth_service_authservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_app_services_notification_service",
+      "target": "src_frontend_src_app_auth_auth_service_authservice",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/services/notification.service.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_frontend_src_main",
+      "target": "src_frontend_src_app_app_app",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/main.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "c_users_soporte_it_documents_capacitacionia_proyecto_final_last_mile_top_performers_src_frontend_src_app_components_ranking_dashboard_ranking_dashboard_rankingdashboard_progreso",
+      "target": "src_frontend_src_app_services_repartidores_service_repartidorrendimientodto",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/frontend/src/app/components/ranking-dashboard/ranking-dashboard.ts",
+      "source_location": "L61",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
