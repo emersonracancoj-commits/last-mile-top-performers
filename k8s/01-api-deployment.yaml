@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: forza-api
-          image: forza-api:local
+          image: ghcr.io/emersonracancoj/forza-api:latest-main
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

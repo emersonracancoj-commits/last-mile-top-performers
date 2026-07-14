@@ -109,3 +109,8 @@ jobs:
           kubectl describe pod -n forza -l app=forza-api
           echo "--- LOGS API POD ---"
           kubectl logs -n forza -l app=forza-api
+
+      - name: Update Kubernetes deployment with new image
+        run: |
+          kubectl set image deployment/forza-api forza-api=ghcr.io/${{ github.repository_owner }}/forza-api:latest-main -n forza
+          kubectl set image deployment/forza-frontend forza-frontend=ghcr.io/${{ github.repository_owner }}/forza-frontend:latest-main -n forza
