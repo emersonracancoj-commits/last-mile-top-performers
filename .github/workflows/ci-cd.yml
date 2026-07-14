@@ -92,6 +92,17 @@ jobs:
           kubectl -n forza set image deployment/forza-api forza-api="${API_IMAGE}"
           kubectl -n forza set image deployment/forza-frontend forza-frontend="${FRONTEND_IMAGE}"
 
+      - name: Debug Deployment failure
+        if: failure()
+        run: |
+          echo "--- PODS STATUS ---"
+          kubectl get pods -n forza
+          echo "--- DESCRIBE API POD ---"
+          # Esto nos dirá el error de 'ImagePullBackOff' o el error de la app
+          kubectl describe pod -n forza -l app=forza-api
+          echo "--- LOGS API POD ---"
+          kubectl logs -n forza -l app=forza-api
+
       - name: Verify rollout
         shell: bash
         run: |
