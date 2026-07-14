@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: forza-api-config
+  labels:
+    app.kubernetes.io/name: forza-api
+    app.kubernetes.io/instance: last-mile-top-performers
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/part-of: forza-last-mile-top-performers
+    forza.tech/standard-version: v2.1
+    forza.tech/team: delivery
+data:
+  ASPNETCORE_ENVIRONMENT: Development
+  ASPNETCORE_URLS: http://+:8080
+  CONNECTIONSTRINGS__DEFAULTCONNECTION: Host=postgres;Port=5432;Database=forza_last_mile;Username=forza_user;Password=forza_password
+  NATS__URL: nats://<NATS_HOST>:4222
