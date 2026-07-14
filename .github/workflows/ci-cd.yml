@@ -92,6 +92,13 @@ jobs:
           kubectl -n forza set image deployment/forza-api forza-api="${API_IMAGE}"
           kubectl -n forza set image deployment/forza-frontend forza-frontend="${FRONTEND_IMAGE}"
 
+      - name: Verify rollout
+        shell: bash
+        run: |
+          kubectl -n forza rollout status deployment/forza-api --timeout=180s
+          kubectl -n forza rollout status deployment/forza-frontend --timeout=180s
+          kubectl get pods -n forza
+
       - name: Debug Deployment failure
         if: failure()
         run: |
@@ -102,10 +109,3 @@ jobs:
           kubectl describe pod -n forza -l app=forza-api
           echo "--- LOGS API POD ---"
           kubectl logs -n forza -l app=forza-api
-
-      - name: Verify rollout
-        shell: bash
-        run: |
-          kubectl -n forza rollout status deployment/forza-api --timeout=180s
-          kubectl -n forza rollout status deployment/forza-frontend --timeout=180s
-          kubectl get pods -n forza
