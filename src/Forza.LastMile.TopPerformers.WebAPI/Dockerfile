@@ -6,8 +6,8 @@ WORKDIR /src
 # Copy full src context (build with context at src/)
 COPY . .
 
-RUN dotnet restore "Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj"
-RUN dotnet publish "Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj" \
+RUN dotnet restore "src/Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj"
+RUN dotnet publish "src/Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj" \
     -c Release \
     -o /app/publish \
     /p:UseAppHost=false
