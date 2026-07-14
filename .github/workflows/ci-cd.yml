@@ -36,8 +36,8 @@ jobs:
       - name: Build and push API image
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: src/Forza.LastMile.TopPerformers.WebAPI/Dockerfile
+          context: src
+          file: Forza.LastMile.TopPerformers.WebAPI/Dockerfile
           push: true
           tags: |
             ${{ env.API_IMAGE }}
@@ -46,8 +46,8 @@ jobs:
       - name: Build and push Frontend image
         uses: docker/build-push-action@v6
         with:
-          context: .
-          file: src/frontend/Dockerfile
+          context: src/frontend
+          file: Dockerfile
           push: true
           tags: |
             ${{ env.FRONTEND_IMAGE }}
@@ -72,6 +72,10 @@ jobs:
 
       - name: Apply manifests with deploy script
         shell: pwsh
+        env:
+          GHCR_USERNAME: ${{ secrets.GHCR_USERNAME }}
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+          GHCR_EMAIL: ${{ secrets.GHCR_EMAIL }}
         run: ./deploy.ps1
 
       - name: Update deployments to new GHCR images

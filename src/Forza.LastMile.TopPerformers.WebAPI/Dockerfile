@@ -3,11 +3,11 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy full repository context (build with context at repository root)
+# Copy full src context (build with context at src/)
 COPY . .
 
-RUN dotnet restore "src/Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj"
-RUN dotnet publish "src/Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj" \
+RUN dotnet restore "Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj"
+RUN dotnet publish "Forza.LastMile.TopPerformers.WebAPI/Forza.LastMile.TopPerformers.WebAPI.csproj" \
     -c Release \
     -o /app/publish \
     /p:UseAppHost=false
